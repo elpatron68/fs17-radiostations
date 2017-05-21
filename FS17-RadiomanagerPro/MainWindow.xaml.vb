@@ -1,9 +1,11 @@
 ﻿Imports System.IO
 Imports System.Net
+
 Imports Newtonsoft.Json
 Class MainWindow
     Private Sub btnSearch_Click(sender As Object, e As RoutedEventArgs) Handles btnSearch.Click
-        Dim url = "http://www.radio-browser.info/webservice/json/stations/byname/" + textBox.Text
+        Dim url = "http://www.radio-browser.info/webservice/json/stations/byname/"
+        url = url + Uri.EscapeDataString(textBox.Text)
         Dim request As HttpWebRequest = CType(WebRequest.Create(url), HttpWebRequest)
         request.Method = WebRequestMethods.Http.[Get]
         request.UserAgent = "FS17-Radiomanager/1.0"
@@ -17,9 +19,12 @@ Class MainWindow
         End Using
         Dim Radiostations As List(Of Searchresult) = DirectCast(JsonConvert.DeserializeObject(sJsonAnswer, GetType(List(Of Searchresult))),
             List(Of Searchresult))
-        Dim view As CollectionView = CollectionViewSource.GetDefaultView(Radiostations)
-        ' view.GroupDescriptions.Add(New PropertyGroupDescription("Name"))
-        resultView.ItemsSource = view
+        If Radiostations.Count > 0 Then
+            Dim view As CollectionView = CollectionViewSource.GetDefaultView(Radiostations)
+            resultView.ItemsSource = view
+        Else
+            MsgBox("No matching stations found.", MsgBoxStyle.Information)
+        End If
     End Sub
 
     Private Sub _AddStation(sender As Object, e As RoutedEventArgs)
