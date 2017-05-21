@@ -2,3 +2,4 @@
 /FS17-RadiomanagerPro/obj
 /FS17-RadiomanagerPro/bin
 /.vs
+/packages/Newtonsoft.Json.10.0.2/lib
