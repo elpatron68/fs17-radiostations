@@ -57,4 +57,11 @@ Class MainWindow
             End Try
         End If
     End Sub
+
+    Private Sub _editStations(sender As Object, e As RoutedEventArgs) Handles btnEdit.Click
+        Dim sFilename As String = "streamingInternetRadios.xml"
+        Dim sDirectory As String = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\my games\FarmingSimulator2017\music"
+        Dim sFullpath = Path.Combine(sDirectory, sFilename)
+        Process.Start("notepad.exe", sFullpath)
+    End Sub
 End Class
