@@ -11,7 +11,7 @@
             <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="label" Content="Right click on result to add a radio station. Brought to you by elpatron." HorizontalAlignment="Center"/>
         </StackPanel>
-        <Button x:Name="btnSearch" Content="_Search www.radio-browser.info" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Width="184" Height="23" IsDefault="True"/>
+        <Button x:Name="btnSearch" Content="_Search radio station" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top" Width="184" Height="23" IsDefault="True"/>
         <Button x:Name="btnEdit" Content="_Edit FS17 radio stations" Margin="343,10,0,0" VerticalAlignment="Top" Height="23" IsDefault="True" HorizontalAlignment="Left" Width="164"/>
         <ListBox x:Name="resultView" Margin="10,63,10,10">
             <ListBox.ItemTemplate>
