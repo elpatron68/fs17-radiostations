@@ -46,7 +46,7 @@ to remove the station *1.FM - Classic Rock Replay Radio*. Save the file and rest
 
 
 ## Useage in the game
-Start the game, enter a vehicle and start the radio with key `5`, play the next station (`6`) or go to previous (`4`).
+Start the game, enter a vehicle and start the radio with key `[5]`, play the next station `[6]` or go to previous `[4]`.
 
 ## Uninstallation
 Uninstall this software by using the Windows Software Uninstall control panel.
