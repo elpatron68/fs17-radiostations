@@ -6,6 +6,7 @@ Add radio stations from http://www.radio-browser.info/ (via API) to your Farming
 
 ## Requirements
   - Windows 7 or higher
+  - Microsoft .NET Framework 4.5 or higher
   - Installation of the game Farmin Simulator 2017
 
 ## Download
