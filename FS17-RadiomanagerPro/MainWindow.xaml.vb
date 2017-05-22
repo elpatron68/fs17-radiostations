@@ -55,6 +55,9 @@ Class MainWindow
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
+        Else
+            MsgBox("Farming Simulator 2017 radio station configuration file missing." + vbCrLf + vbCrLf +
+                   sFullpath, MsgBoxStyle.Critical)
         End If
     End Sub
 
