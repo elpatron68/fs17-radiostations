@@ -46,7 +46,7 @@ Remove a station by deleting it´s corresponding lines. Example: Delete the line
 to remove the station *1.FM - Classic Rock Replay Radio*. Save the file and restart FS17 (if it was running).
 
 
-## Useage in the game
+## Ingame useage
 Start the game, enter a vehicle and start the radio with key `[5]`, play the next station `[6]` or go to previous `[4]`.
 
 ## Uninstallation
