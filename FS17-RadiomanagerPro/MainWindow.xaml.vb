@@ -4,7 +4,7 @@ Imports System.Net
 Imports Newtonsoft.Json
 Class MainWindow
     Private Sub btnSearch_Click(sender As Object, e As RoutedEventArgs) Handles btnSearch.Click
-        Dim url = "http://www.radio-browser.info/webservice/json/stations/byname/"
+        Dim url = "https://de1.api.radio-browser.info/json/stations/byname/"
         url = url + Uri.EscapeDataString(textBox.Text)
         Dim request As HttpWebRequest = CType(WebRequest.Create(url), HttpWebRequest)
         request.Method = WebRequestMethods.Http.[Get]
