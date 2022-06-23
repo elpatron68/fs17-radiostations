@@ -12,11 +12,16 @@ Class MainWindow
         request.ContentType = "application/json; charset=utf-8"
 
         Dim sJsonAnswer As String
-        Dim response = DirectCast(request.GetResponse(), HttpWebResponse)
+        Try
+            Dim response = DirectCast(request.GetResponse(), HttpWebResponse)
+            Using sr = New StreamReader(response.GetResponseStream())
+                sJsonAnswer = sr.ReadToEnd()
+            End Using
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical)
+            Exit Sub
+        End Try
 
-        Using sr = New StreamReader(response.GetResponseStream())
-            sJsonAnswer = sr.ReadToEnd()
-        End Using
         Dim Radiostations As List(Of Searchresult) = DirectCast(JsonConvert.DeserializeObject(sJsonAnswer, GetType(List(Of Searchresult))),
             List(Of Searchresult))
         If Radiostations.Count > 0 Then
