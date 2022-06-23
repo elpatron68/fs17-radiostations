@@ -8,7 +8,7 @@ Class MainWindow
         url = url + Uri.EscapeDataString(textBox.Text)
         Dim request As HttpWebRequest = CType(WebRequest.Create(url), HttpWebRequest)
         request.Method = WebRequestMethods.Http.[Get]
-        request.UserAgent = "FS17-Radiomanager/1.0"
+        request.UserAgent = "FS-Radiomanager/1.1"
         request.ContentType = "application/json; charset=utf-8"
 
         Dim sJsonAnswer As String
