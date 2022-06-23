@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FS17_RadiomanagerPro"
         mc:Ignorable="d"
-        Title="FS17 Radiomanager" Height="350" Width="525" Icon="pack://siteoforigin:,,,/Resources/radio-old.ico">
+        Title="FS Radiomanager" Height="350" Width="525" Icon="pack://siteoforigin:,,,/Resources/radio-old.ico">
     <Grid>
         <StackPanel FocusManager.FocusedElement="{Binding ElementName=textBox}">
             <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
